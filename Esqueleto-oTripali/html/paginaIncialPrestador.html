@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Pagina Inicial </title>
+  <style type=" "></style>
+  <link rel="stylesheet" type="text/css" href=" ../css/style.css">
+  <script type="text/javascript" src="../script/script.js" > </script>
+</head>
+<body>
+
+
+  <!-- ESTA PARTE É A NAV DO HTML -->
+
+  <div class="NavPrestador">
+    <a class="active" href="#home">O</a>
+    <a href="#about">Perfil</a>
+    <a href="#contact">Clientes</a>
+    <a href="#" ><img  src="../images/bell.png"></a>
+    <div class="busca">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Pesquisar Serviços.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+    <!-- AQUI TEMOS OS SERVIÇOS DE ACOROD COM A LOCALIZAÇÃO -->
+
+    <table>
+      <td>   <h2>Serviços próximos a você num raio de </h2> </td>
+      <td><select>
+        <option>10 KM</option>
+        <option>20 KM</option>
+        <option>30 KM</option>
+        <option>40 KM</option>
+        <option>50 KM</option>
+        <option>60 KM</option>
+      </select></td>
+    </table>
+
+
+<!--
+      A CLASSE alinhamento E prestação EU SO FIZ PRA NÃO
+      USAR TODA A TELA E FICA PARECENDO UM SITE
+
+
+    DPS DA CLASSE alinhamento
+   TEM AS DIV DOS Clientes -->
+
+
+  <div class="alinhamento">
+
+    <div class="prestação">
+      <div >
+        <table>
+          <td>
+            <img id="clientePerfil" src="../images/cliente1.jpg">
+          </td>
+
+          <td>
+            <p>João da Silva<br>
+              Desde de 29/11/2019<br>
+              Visto por ultimo
+            </p>
+          </td>
+        </table>
+        <img id="servicos" src="../images/servico1.jpg">
+        <p > Preciso que a grama do quintal seja cortada urgentemente!</p>
+        <div class="test"><a href="joaoSilveira.html"><img id="icon"  src="../images/plus (2).png"></a>
+        </div>
+      </div>
+
+      <div >
+        <table>
+          <td>
+            <img id="clientePerfil" src="../images/cliente2.jpg">
+          </td>
+
+          <td>
+            <p>Ana Clara<br>
+              Desde de 20/10/2019<br>
+              Visto por ultimo
+            </p>
+          </td>
+        </table>
+        <img id="servicos" src="../images/servico2.jpg">
+        <p > Meu liquidificador quebrou!</p>
+        <div class="test"><a href="anaClara.html"><img id="icon"  src="../images/plus (2).png"></a> </div>
+      </div>
+      <div >
+        <table>
+          <td>
+            <img id="clientePerfil" src="../images/cliente3.jpg">
+          </td>
+
+          <td>
+            <p>Paula Medeiros<br>
+              Desde de 20/10/2019<br>
+              Visto por ultimo
+            </p>
+          </td>
+        </table>
+        <img id="servicos" src="../images/servico3.jpg">
+        <p > Minha filha vai fazer aniversário e preciso de alguém<br>
+          que mecha com decoração</p>
+          <div class="test"><a href="paulaMedeiros.html"><img id="icon"  src="../images/plus (2).png"></a> </div>
+        </div>
+      </div>
+    </div>
+
+
+    <br>
+    <button type="button" onclick="carregarMais()" name="button">mais</button>
+    <p id="conteudo"></p>
+
+  </body>
+  </html>

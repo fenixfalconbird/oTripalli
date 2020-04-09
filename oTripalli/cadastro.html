@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>oTripalli - Cadastro</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/estilo.css">
+<script src="js/script.js"></script>  
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/localization/messages_pt_BR.js"></script>
+<script type="text/javascript">   
+      $(document).ready(function(){
+        $("#formCadastro").validate({
+          rules:{
+            nome: {
+              required: true,
+              maxlength: 100,
+              minlength: 10,
+            },
+            cpf: {
+              required:true,
+              minlength:11,
+              maxlength:14
+            },
+            email: {
+              required: true,
+              email: true
+            },
+            senha: {
+              required:true,
+              maxlength:20,
+              minlength:10
+            },
+            estado: {
+              required: true
+            },
+            idade: {
+              required: true,
+              min: 1,
+              max: 100
+            },
+            tipo: {
+              required: true
+            }
+          },
+          submitHandler: function(form){
+            alert("Seu cadastro foi efeituado com sucesso!")           
+          }
+        })
+      })
+</script>
+
+<body>
+
+<!-- Barra de navegação -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="menuMobile()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+    <a href="cadastro.html" class="w3-bar-item w3-button w3-padding-large w3-white">Cadastro</a>
+    <a href="entrar.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Entrar</a>
+    <a href="faq.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">FAQ</a>
+    <a href="sobre.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sobre nós</a>
+  </div>
+
+  <!-- Barra de navegação em dispositivos móveis -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="entrar.html" class="w3-bar-item w3-button w3-padding-large">Entrar</a>
+    <a href="faq.html" class="w3-bar-item w3-button w3-padding-large">FAQ</a>
+    <a href="sobre.html" class="w3-bar-item w3-button w3-padding-large">Sobre nós</a>
+  </div>
+</div>
+
+<!-- Cabeçalho -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">oTripali</h1>
+  <p class="w3-xlarge">A MAIOR PLATAFORMA DE EMPREGOS INFORMAIS DO BRASIL</p>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Formuário de Cadastro:</h1>
+      <form name="formCadastro" id="formCadastro" method="post" action="entrar.html">
+          <div class="row">
+          <label>Nome</label>
+          <input type="text" name="nome" id="nome" class="form-control" />
+        </div>
+        <div class="row">
+          <label>CPF</label>
+          <input type="text" name="cpf" id="cpf" class="form-control" />
+        </div> 
+        <div class="row">
+          <label>E-mail</label>
+          <input type="email" name="email" id="email" class="form-control" />
+        </div>
+        <div class="row">
+          <label>Senha</label>
+          <input type="text" name="senha" id="senha" class="form-control" />
+        </div>        
+        <div class="row">
+          <label>Estado</label>
+          <select name="estado" id="estado" class="form-control">
+            <option value="">----</option>
+            <option value="sp">SP</option>
+            <option value="mg">MG</option>
+            <option value="rj">RJ</option>
+          </select>
+        </div>
+        <div class="row">
+          <label>Idade</label>
+          <input type="number" name="idade" id="idade" class="form-control" />
+        </div>
+        <div class="row">
+          <label>Deseja se cadastrar como: </label>
+          <select name="tipo" id="tipo" class="form-control">
+            <option value="">----</option>
+            <option value="prestador">Prestador</option>
+            <option value="cliente">cliente</option>
+          </select>          
+        </div>
+        <br>
+        <div class="row">
+          <input type="submit" name="enviar" id="enviar" class="btn btn-primary form-control" onclick="submitForm()"  />
+        </div>
+      </form>
+    </div>
+    <div class="w3-third w3-center">
+      <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Não existem métodos fáceis para resolver problemas difíceis | René Descartes</h1>
+</div>
+
+<!-- Rodapé -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ <p>Desenvolvido por <a href="sobre.html" target="_blank">Equipe oTripali</a></p>
+</footer>
+
+</body>
+</html>
