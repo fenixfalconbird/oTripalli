@@ -1,0 +1,194 @@
+/* estilo da barra NavBar */
+
+        body {
+            font-size: 28px;
+            font-family: Calibri;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: lightblue;
+            position: -webkit-sticky;
+            /* Safari */
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: darkblue;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        form.example input[type=text] {
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 80%;
+            background: #f1f1f1;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+
+        form.example button:hover {
+            background: #0b7dda;
+        }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        #Add {
+            position: relative;
+        }
+
+
+/* Estilo do site em si */
+
+body {
+    background: lightgray;
+}
+
+header {
+    background-color: aqua;
+    font-family: Helvetica, sans-serif;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+
+#Header>a {
+    background-color: cornflowerblue;
+    text-decoration: none;
+}
+
+#Header>img {
+    width: 65px;
+}
+
+#input {
+    size: 30px;
+}
+
+#seusServicos {
+    position: absolute;
+    left: 0;
+}
+
+.section-serviços {
+    display: flex;
+    justify-content: center;
+    background-color: chartreuse;
+}
+
+.itens {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    background-color: white;
+}
+
+/* Estilo das caixas de serviço */
+#pond {
+    display: flex;
+    flex-flow: row wrap;
+
+    background-color: aliceblue;
+
+}
+
+#conteudo-servico {
+
+    border-width: 10px;
+    border-color : pink;
+    width: 500px;
+    height: 550px;
+    background-color: white;
+    position: relative;
+}
+
+#conteudo-servico:hover, #content:hover {
+    background-color: rgb(197, 243, 243);
+}
+
+#perfil {
+    position: absolute;
+    top: 0px;
+    border-radius: 50%;
+    height: 23%;
+}
+
+#content {
+    background: ivory;
+    width: 450px;
+    height: 425px;
+    position: relative;
+    left: 35px;
+}
+
+#plus {
+    width: 70px;
+    position: relative;
+    top: -50px;
+    left: 455px;
+
+}
+
+#time {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 150px;
+    font-family: Calibri;
+    border-radius: 9px;
+
+}
+
+#desc {
+    background-color: rgb(233, 218, 160);
+    margin-left: 110px;
+    width: 290px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+em {
+    background-color: lightgreen;
+    font-size: 30px;
+}
